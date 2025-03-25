@@ -1,0 +1,7 @@
+django
+django-allauth
+yfinance
+pandas
+numpy
+matplotlib
+plotly
