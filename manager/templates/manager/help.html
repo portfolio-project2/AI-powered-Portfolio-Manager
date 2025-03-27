@@ -1,0 +1,181 @@
+&lt;!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Center - Wealth Advisor AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <div class="flex min-h-screen flex-col">
+    &lt;!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div class="container flex h-14 items-center">
+        <div class="mr-4 hidden md:flex">
+          <a href="index.html" class="flex items-center space-x-2">
+            <span class="font-bold text-xl">
+              <span class="text-blue-600">Wealth</span>
+              <span>Advisor AI</span>
+            </span>
+          </a>
+        </div>
+        <div class="mr-4 flex md:hidden">
+          <a href="index.html" class="flex items-center space-x-2">
+            <span class="font-bold text-xl">
+              <span class="text-blue-600">W</span>
+              <span>A</span>
+            </span>
+          </a>
+        </div>
+        <nav class="mx-6 hidden md:flex items-center space-x-4 lg:space-x-6">
+          <a href="index.html" class="text-sm font-medium transition-colors hover:text-blue-600">Home</a>
+          <a href="dashboard.html" class="text-sm font-medium transition-colors hover:text-blue-600">Dashboard</a>
+          <a href="stocks.html" class="text-sm font-medium transition-colors hover:text-blue-600">Stocks</a>
+          <a href="help.html" class="text-sm font-medium transition-colors hover:text-blue-600">Help</a>
+          <a href="about.html" class="text-sm font-medium transition-colors hover:text-blue-600">About Us</a>
+        </nav>
+        <div class="flex flex-1 items-center justify-end space-x-2">
+          <nav class="flex items-center space-x-2">
+            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
+              <i data-lucide="bell" class="h-4 w-4"></i>
+              <span class="sr-only">Notifications</span>
+            </button>
+            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
+              <i data-lucide="settings" class="h-4 w-4"></i>
+              <span class="sr-only">Settings</span>
+            </button>
+            <div class="relative">
+              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 w-8 p-0 relative rounded-full">
+                <span class="relative flex h-8 w-8 shrink-0 overflow-hidden rounded-full">
+                  <img class="aspect-square h-full w-full" src="https://placehold.co/32x32" alt="User" />
+                  <span class="flex h-full w-full items-center justify-center rounded-full bg-gray-100">JD</span>
+                </span>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    &lt;!-- Main Content -->
+    <main class="flex-1 space-y-4 p-4 md:p-8 pt-6">
+      <div class="flex items-center justify-between">
+        <h2 class="text-3xl font-bold tracking-tight">Help Center</h2>
+      </div>
+
+      &lt;!-- Search Card -->
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm mb-6">
+        <div class="p-6">
+          <div class="text-center max-w-2xl mx-auto mb-6">
+            <h3 class="text-2xl font-bold mb-2">How can we help you today?</h3>
+            <p class="text-muted-foreground">Search our knowledge base or browse the topics below</p>
+          </div>
+          <div class="relative max-w-xl mx-auto">
+            <i data-lucide="search" class="absolute left-3 top-3 h-4 w-4 text-muted-foreground"></i>
+            <input placeholder="Search for answers..." class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 pl-10" />
+            <button class="absolute right-1 top-1 h-8 inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 text-white hover:bg-blue-700 h-8 px-4 py-2">Search</button>
+          </div>
+        </div>
+      </div>
+
+      &lt;!-- Tabs -->
+      <div class="space-y-4">
+        <div class="border-b">
+          <div class="flex h-10 items-center space-x-4 overflow-x-auto">
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm border-b-2 border-blue-600" data-state="active">
+              <i data-lucide="help-circle" class="h-4 w-4 mr-2"></i>
+              <span class="hidden md:inline">FAQs</span>
+            </button>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">
+              <i data-lucide="book-open" class="h-4 w-4 mr-2"></i>
+              <span class="hidden md:inline">Guides</span>
+            </button>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">
+              <i data-lucide="video" class="h-4 w-4 mr-2"></i>
+              <span class="hidden md:inline">Tutorials</span>
+            </button>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">
+              <i data-lucide="message-square" class="h-4 w-4 mr-2"></i>
+              <span class="hidden md:inline">Contact Us</span>
+            </button>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">
+              <i data-lucide="file-text" class="h-4 w-4 mr-2"></i>
+              <span class="hidden md:inline">Documentation</span>
+            </button>
+          </div>
+        </div>
+
+        &lt;!-- FAQ Tab Content -->
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <h3 class="text-2xl font-semibold leading-none tracking-tight">Frequently Asked Questions</h3>
+            <p class="text-sm text-muted-foreground">Find answers to the most common questions about Wealth Advisor AI</p>
+          </div>
+          <div class="p-6">
+            &lt;!-- FAQ Accordion -->
+            <div class="w-full">
+              &lt;!-- FAQ Item 1 -->
+              <div class="border-b">
+                <button class="flex w-full items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180" data-state="closed">
+                  <span>What is Wealth Advisor AI?</span>
+                  <i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i>
+                </button>
+                <div class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-state="closed" style="height: 0px;">
+                  <div class="pb-4 pt-0">
+                    <p class="text-muted-foreground">Wealth Advisor AI is an AI-powered investment management system that helps you optimize your investment portfolio by analyzing your current holdings, understanding your financial goals, and tracking real-time market conditions.</p>
+                  </div>
+                </div>
+              </div>
+              
+              &lt;!-- FAQ Item 2 -->
+              <div class="border-b">
+                <button class="flex w-full items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180" data-state="closed">
+                  <span>How does the AI generate investment recommendations?</span>
+                  <i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i>
+                </button>
+                <div class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-state="closed" style="height: 0px;">
+                  <div class="pb-4 pt-0">
+                    <p class="text-muted-foreground">Our AI analyzes your portfolio, financial goals, risk tolerance, and current market conditions using advanced machine learning algorithms. It then generates personalized recommendations based on historical data, market trends, and financial principles.</p>
+                  </div>
+                </div>
+              </div>
+              
+              &lt;!-- FAQ Item 3 -->
+              <div class="border-b">
+                <button class="flex w-full items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180" data-state="closed">
+                  <span>Is my financial data secure?</span>
+                  <i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i>
+                </button>
+                <div class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" data-state="closed" style="height: 0px;">
+                  <div class="pb-4 pt-0">
+                    <p class="text-muted-foreground">Yes, we take security very seriously. All your financial data is encrypted using bank-level encryption, and we employ strict data privacy policies. We never sell your personal data to third parties.</p>
+                  </div>
+                </div>
+              </div>
+              
+              &lt;!-- More FAQ Items -->
+              <div class="border-b">
+                <button class="flex w-full items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180" data-state="closed">
+                  <span>How accurate are the AI predictions?</span>
+                  <i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i>
+                </button>
+              </div>
+              
+              <div class="border-b">
+                <button class="flex w-full items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180" data-state="closed">
+                  <span>Can I customize my risk profile?</span>
+                  <i data-lucide="chevron-down" class="h-4 w-4 shrink-0 transition-transform duration-200"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Wealth Advisor AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <div class="flex min-h-screen flex-col">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div class="container flex h-14 items-center">
+        <div class="mr-4 hidden md:flex">
+          <a href="index.html" class="flex items-center space-x-2">
+            <span class="font-bold text-xl">
+              <span class="text-blue-600">Wealth</span>
+              <span>Advisor AI</span>
+            </span>
+          </a>
+        </div>
+        <div class="mr-4 flex md:hidden">
+          <a href="index.html" class="flex items-center space-x-2">
+            <span class="font-bold text-xl">
+              <span class="text-blue-600">W</span>
+              <span>A</span>
+            </span>
+          </a>
+        </div>
+        <nav class="mx-6 hidden md:flex items-center space-x-4 lg:space-x-6">
+          <a href="index.html" class="text-sm font-medium transition-colors hover:text-blue-600">Home</a>
+          <a href="dashboard.html" class="text-sm font-medium transition-colors hover:text-blue-600">Dashboard</a>
+          <a href="stocks.html" class="text-sm font-medium transition-colors hover:text-blue-600">Stocks</a>
+          <a href="help.html" class="text-sm font-medium transition-colors hover:text-blue-600">Help</a>
+          <a href="about.html" class="text-sm font-medium transition-colors hover:text-blue-600">About Us</a>
+        </nav>
+        <div class="flex flex-1 items-center justify-end space-x-2">
+          <nav class="flex items-center space-x-2">
+            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
+              <i data-lucide="bell" class="h-4 w-4"></i>
+              <span class="sr-only">Notifications</span>
+            </button>
+            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
+              <i data-lucide="settings" class="h-4 w-4"></i>
+              <span class="sr-only">Settings</span>
+            </button>
+            <div class="relative">
+              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 w-8 p-0 relative rounded-full">
+                <span class="relative flex h-8 w-8 shrink-0 overflow-hidden rounded-full">
+                  <img class="aspect-square h-full w-full" src="https://placehold.co/32x32" alt="User" />
+                  <span class="flex h-full w-full items-center justify-center rounded-full bg-gray-100">JD</span>
+                </span>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="flex-1 space-y-4 p-4 md:p-8 pt-6">
+      <div class="flex items-center justify-between">
+        <h2 class="text-3xl font-bold tracking-tight">Dashboard</h2>
+        <div class="flex items-center gap-2">
+          <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 text-white hover:bg-blue-700 h-10 px-4 py-2">Update Portfolio</button>
+        </div>
+      </div>
+      
+      <!-- Tabs -->
+      <div class="space-y-4">
+        <div class="border-b">
+          <div class="flex h-10 items-center space-x-4">
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm border-b-2 border-blue-600" data-state="active">Overview</button>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Recommendations</button>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Market News</button>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Financial Goals</button>
+          </div>
+        </div>
+        
+        <!-- Overview Tab Content -->
+        <div class="space-y-4">
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <!-- Card 1 -->
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+              <div class="flex flex-row items-center justify-between space-y-0 p-6 pb-2">
+                <h3 class="text-sm font-medium">Total Portfolio Value</h3>
+              </div>
+              <div class="p-6 pt-0">
+                <div class="text-2xl font-bold">$124,765.89</div>
+                <p class="text-xs text-muted-foreground">
+                  <span class="text-green-500">+2.5%</span> from last month
+                </p>
+              </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+              <div class="flex flex-row items-center justify-between space-y-0 p-6 pb-2">
+                <h3 class="text-sm font-medium">Monthly Return</h3>
+              </div>
+              <div class="p-6 pt-0">
+                <div class="text-2xl font-bold">+3.2%</div>
+                <p class="text-xs text-muted-foreground">
+                  <span class="text-green-500">+0.7%</span> vs market average
+                </p>
+              </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+              <div class="flex flex-row items-center justify-between space-y-0 p-6 pb-2">
+                <h3 class="text-sm font-medium">Risk Score</h3>
+              </div>
+              <div class="p-6 pt-0">
+                <div class="text-2xl font-bold">65/100</div>
+                <p class="text-xs text-muted-foreground">Moderate risk profile</p>
+              </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+              <div class="flex flex-row items-center justify-between space-y-0 p-6 pb-2">
+                <h3 class="text-sm font-medium">Goal Progress</h3>
+              </div>
+              <div class="p-6 pt-0">
+                <div class="text-2xl font-bold">72%</div>
+                <p class="text-xs text-muted-foreground">Retirement fund on track</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+            <!-- Portfolio Overview Card -->
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm col-span-4">
+              <div class="flex flex-col space-y-1.5 p-6">
+                <h3 class="text-lg font-semibold leading-none tracking-tight">Portfolio Overview</h3>
+                <p class="text-sm text-muted-foreground">Your asset allocation and performance</p>
+              </div>
+              <div class="p-6 pl-2">
+                <!-- Portfolio Chart Placeholder -->
+                <div class="w-full space-y-4">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <div class="h-80 flex items-center justify-center bg-muted rounded-md">
+                        <div class="text-center">
+                          <div class="h-full w-full" style="position: relative;">
+                            <!-- Pie chart placeholder -->
+                            <svg width="100%" height="100%" viewBox="0 0 200 200">
+                              <path d="M100,100 L100,10 A90,90 0 0,1 174.6,64.6 Z" fill="#3b82f6"></path>
+                              <path d="M100,100 L174.6,64.6 A90,90 0 0,1 150.5,150.5 Z" fill="#10b981"></path>
+                              <path d="M100,100 L150.5,150.5 A90,90 0 0,1 64.6,174.6 Z" fill="#f59e0b"></path>
+                              <path d="M100,100 L64.6,174.6 A90,90 0 0,1 10,100 Z" fill="#6b7280"></path>
+                              <path d="M100,100 L10,100 A90,90 0 0,1 25.4,35.4 Z" fill="#ef4444"></path>
+                              <path d="M100,100 L25.4,35.4 A90,90 0 0,1 100,10 Z" fill="#f97316"></path>
+                              <circle cx="100" cy="100" r="70" fill="white"></circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-4 flex justify-center gap-6">
+                        <div class="flex items-center gap-2 min-w-[80px]">
+                          <div class="h-2 w-2 rounded-full bg-blue-600"></div>
+                          <span>Stocks (45%)</span>
+                        </div>
+                        <div class="flex items-center gap-2 min-w-[80px]">
+                          <div class="h-2 w-2 rounded-full bg-green-600"></div>
+                          <span>Bonds (20%)</span>
+                        </div>
+                        <div class="flex items-center gap-2 min-w-[80px]">
+                          <div class="h-2 w-2 rounded-full bg-yellow-500"></div>
+                          <span>Real Estate (15%)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="space-y-4">
+                      <div class="rounded-lg border p-4">
+                        <h3 class="font-semibold mb-2">Portfolio Highlights</h3>
+                        <ul class="space-y-2 text-sm">
+                          <li class="flex justify-between">
+                            <span class="text-muted-foreground">Diversification Score:</span>
+                            <span class="font-medium">8.2/10</span>
+                          </li>
+                          <li class="flex justify-between">
+                            <span class="text-muted-foreground">Annual Return:</span>
+                            <span class="font-medium text-green-500">+12.4%</span>
+                          </li>
+                          <li class="flex justify-between">
+                            <span class="text-muted-foreground">Volatility:</span>
+                            <span class="font-medium">Medium</span>
+                          </li>
+                          <li class="flex justify-between">
+                            <span class="text-muted-foreground">ESG Score:</span>
+                            <span class="font-medium">7.5/10</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="rounded-lg border p-4">
+                        <h3 class="font-semibold mb-2">AI Insights</h3>
+                        <p class="text-sm text-muted-foreground">
+                          Your portfolio is well-diversified but slightly overweight in technology stocks. Consider increasing bond
+                          allocation to reduce volatility in the current market conditions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Risk Analysis Card -->
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm col-span-3">
+              <div class="flex flex-col space-y-1.5 p-6">
+                <h3 class="text-lg font-semibold leading-none tracking-tight">Risk Analysis</h3>
+                <p class="text-sm text-muted-foreground">Portfolio risk assessment</p>
+              </div>
+              <div class="p-6">
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <h4 class="text-sm font-semibold">Risk Score: 65/100</h4>
+                      <p class="text-xs text-muted-foreground">Moderate risk profile</p>
+                    </div>
+                    <div class="text-right">
+                      <h4 class="text-sm font-semibold">Market Benchmark: 74/100</h4>
+                      <p class="text-xs text-muted-foreground">Your portfolio is less risky</p>
+                    </div>
+                  </div>
+
+                  <!-- Risk Chart Placeholder -->
+                  <div class="h-[200px] bg-muted rounded-md flex items-center justify-center">
+                    <div class="text-center">
+                      <svg width="100%" height="100%" viewBox="0 0 300 200">
+                        <!-- Grid lines -->
+                        <line x1="0" y1="0" x2="0" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                        <line x1="50" y1="0" x2="50" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                        <line x1="100" y1="0" x2="100" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                        <line x1="150" y1="0" x2="150" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                        <line x1="200" y1="0" x2="200" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                        <line x1="250" y1="0" x2="250" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                        <line x1="300" y1="0" x2="300" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                        
+                        <line x1="0" y1="0" x2="300" y2="0" stroke="#e5e7eb" stroke-width="1" />
+                        <line x1="0" y1="50" x2="300" y2="50" stroke="#e5e7eb" stroke-width="1" />
+                        <line x1="0" y1="100" x2="300" y2="100" stroke="#e5e7eb" stroke-width="1" />
+                        <line x1="0" y1="150" x2="300" y2="150" stroke="#e5e7eb" stroke-width="1" />
+                        <line x1="0" y1="200" x2="300" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                        
+                        <!-- Portfolio risk line -->
+                        <path d="M0,70 L50,64 L100,60 L150,56 L200,64 L250,70 L300,75" fill="none" stroke="#3b82f6" stroke-width="2" />
+                        
+                        <!-- Market risk line (dashed) -->
+                        <path d="M0,60 L50,56 L100,50 L150,44 L200,48 L250,52 L300,54" fill="none" stroke="#6b7280" stroke-width="2" stroke-dasharray="4 4" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="space-y-2 mt-4">
+                    <h4 class="text-sm font-semibold">Risk Factors</h4>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                      <div class="flex justify-between">
+                        <span class="text-muted-foreground">Market Risk:</span>
+                        <span>Medium</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span class="text-muted-foreground">Credit Risk:</span>
+                        <span>Low</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span class="text-muted-foreground">Liquidity Risk:</span>
+                        <span>Low</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span class="text-muted-foreground">Concentration Risk:</span>
+                        <span>Medium-High</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

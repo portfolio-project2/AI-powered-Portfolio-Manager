@@ -1,0 +1,78 @@
+&lt;!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Wealth Advisor AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="flex min-h-screen items-center justify-center bg-gray-100/40 px-4 py-12">
+    <div class="w-full max-w-md rounded-lg border bg-white p-6 shadow-sm">
+      <div class="space-y-1 text-center">
+        <div class="flex justify-center mb-2">
+          <div class="font-bold text-2xl">
+            <span class="text-blue-600">Wealth</span>
+            <span>Advisor AI</span>
+          </div>
+        </div>
+        <h1 class="text-2xl font-bold text-center">Create an account</h1>
+        <p class="text-sm text-gray-500 text-center">
+          Enter your information to get started with Wealth Advisor AI
+        </p>
+      </div>
+      <div class="space-y-4 mt-6">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-2">
+            <label for="firstName" class="text-sm font-medium">First Name</label>
+            <input id="firstName" placeholder="John" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
+          </div>
+          <div class="space-y-2">
+            <label for="lastName" class="text-sm font-medium">Last Name</label>
+            <input id="lastName" placeholder="Doe" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
+          </div>
+        </div>
+        <div class="space-y-2">
+          <label for="email" class="text-sm font-medium">Email</label>
+          <input id="email" type="email" placeholder="name@example.com" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
+        </div>
+        <div class="space-y-2">
+          <label for="password" class="text-sm font-medium">Password</label>
+          <input id="password" type="password" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
+          <p class="text-xs text-gray-500">
+            Password must be at least 8 characters long and include a number and special character.
+          </p>
+        </div>
+        <div class="space-y-2">
+          <label for="investorType" class="text-sm font-medium">Investor Type</label>
+          <select id="investorType" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+            <option value="" selected disabled>Select your investor type</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+            <option value="professional">Professional</option>
+          </select>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="checkbox" id="terms" class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+          <label for="terms" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+            I agree to the
+            <a href="#" class="text-blue-600 underline underline-offset-4">terms of service</a>
+            and
+            <a href="#" class="text-blue-600 underline underline-offset-4">privacy policy</a>
+          </label>
+        </div>
+        <a href="dashboard.html" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 text-white hover:bg-blue-700 h-10 px-4 py-2 w-full">Create Account</a>
+      </div>
+      <div class="mt-6 text-center">
+        <div class="text-sm">
+          <span class="text-gray-500">Already have an account? </span>
+          <a href="login.html" class="text-blue-600 underline-offset-4 hover:underline">
+            Sign in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
