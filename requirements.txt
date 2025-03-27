@@ -6,3 +6,7 @@ numpy
 matplotlib
 plotly
 python-dotenv
+feedparser
+torch
+scipy
+transformers
