@@ -1,0 +1,54 @@
+&lt;!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Wealth Advisor AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="flex min-h-screen items-center justify-center bg-gray-100/40 px-4">
+    <div class="w-full max-w-md rounded-lg border bg-white p-6 shadow-sm">
+      <div class="space-y-1 text-center">
+        <div class="flex justify-center mb-2">
+          <div class="font-bold text-2xl">
+            <span class="text-blue-600">Wealth</span>
+            <span>Advisor AI</span>
+          </div>
+        </div>
+        <h1 class="text-2xl font-bold text-center">Sign in to your account</h1>
+        <p class="text-sm text-gray-500 text-center">
+          Enter your email and password to access your dashboard
+        </p>
+      </div>
+      <div class="space-y-4 mt-6">
+        <div class="space-y-2">
+          <label for="email" class="text-sm font-medium">Email</label>
+          <input id="email" type="email" placeholder="name@example.com" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
+        </div>
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label for="password" class="text-sm font-medium">Password</label>
+            <a href="#" class="text-sm text-blue-600 underline-offset-4 hover:underline">
+              Forgot password?
+            </a>
+          </div>
+          <input id="password" type="password" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
+        </div>
+        <a href="dashboard.html" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 text-white hover:bg-blue-700 h-10 px-4 py-2 w-full">Sign In</a>
+      </div>
+      <div class="mt-6 space-y-4 text-center">
+        <div class="text-sm">
+          <span class="text-gray-500">Don't have an account? </span>
+          <a href="register.html" class="text-blue-600 underline-offset-4 hover:underline">
+            Sign up
+          </a>
+        </div>
+        <div class="text-xs text-gray-500">
+          By signing in, you agree to our Terms of Service and Privacy Policy
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Recommendations - Wealth Advisor AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <div class="flex min-h-screen flex-col">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div class="container flex h-14 items-center">
+        <div class="mr-4 hidden md:flex">
+          <a href="index.html" class="flex items-center space-x-2">
+            <span class="font-bold text-xl">
+              <span class="text-blue-600">Wealth</span>
+              <span>Advisor AI</span>
+            </span>
+          </a>
+        </div>
+        <div class="mr-4 flex md:hidden">
+          <a href="index.html" class="flex items-center space-x-2">
+            <span class="font-bold text-xl">
+              <span class="text-blue-600">W</span>
+              <span>A</span>
+            </span>
+          </a>
+        </div>
+        <nav class="mx-6 hidden md:flex items-center space-x-4 lg:space-x-6">
+          <a href="index.html" class="text-sm font-medium transition-colors hover:text-blue-600">Home</a>
+          <a href="dashboard.html" class="text-sm font-medium transition-colors hover:text-blue-600">Dashboard</a>
+          <a href="stocks.html" class="text-sm font-medium transition-colors hover:text-blue-600">Stocks</a>
+          <a href="help.html" class="text-sm font-medium transition-colors hover:text-blue-600">Help</a>
+          <a href="about.html" class="text-sm font-medium transition-colors hover:text-blue-600">About Us</a>
+        </nav>
+        <div class="flex flex-1 items-center justify-end space-x-2">
+          <nav class="flex items-center space-x-2">
+            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
+              <i data-lucide="bell" class="h-4 w-4"></i>
+              <span class="sr-only">Notifications</span>
+            </button>
+            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
+              <i data-lucide="settings" class="h-4 w-4"></i>
+              <span class="sr-only">Settings</span>
+            </button>
+            <div class="relative">
+              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 w-8 p-0 relative rounded-full">
+                <span class="relative flex h-8 w-8 shrink-0 overflow-hidden rounded-full">
+                  <img class="aspect-square h-full w-full" src="https://placehold.co/32x32" alt="User" />
+                  <span class="flex h-full w-full items-center justify-center rounded-full bg-gray-100">JD</span>
+                </span>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="flex-1 space-y-4 p-4 md:p-8 pt-6">
+      <div class="flex items-center justify-between">
+        <h2 class="text-3xl font-bold tracking-tight">Investment Recommendations</h2>
+        <div class="flex items-center gap-2">
+          <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 text-white hover:bg-blue-700 h-10 px-4 py-2">Update Preferences</button>
+        </div>
+      </div>
+      
+      <div class="space-y-6">
+        <div class="rounded-lg border bg-card p-3 text-card-foreground shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="rounded-full bg-primary/10 p-3">
+              <i data-lucide="lightbulb" class="h-6 w-6 text-primary"></i>
+            </div>
+            <div class="space-y-1">
+              <p class="text-sm font-medium leading-none">AI Portfolio Analysis</p>
+              <p class="text-sm text-muted-foreground">
+                Based on your financial goals and current market conditions, our AI has generated the following
+                recommendations to optimize your portfolio.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Recommendation 1 -->
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+            <div class="p-6 pb-2">
+              <div class="flex justify-between items-start">
+                <div class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-green-50 text-green-700 border-green-200">
+                  Buy
+                </div>
+                <i data-lucide="trending-up" class="h-4 w-4 text-green-500"></i>
+              </div>
+              <h3 class="text-lg font-semibold mt-2">Green Energy ETF</h3>
+              <p class="text-sm text-muted-foreground">
+                Confidence: High • Impact: Medium
+              </p>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-sm text-muted-foreground">Strong growth potential in renewable energy sector with favorable policy changes</p>
+            </div>
+            <div class="flex items-center p-6 pt-0">
+              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 mr-2">
+                Details
+              </button>
+              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 text-white hover:bg-blue-700 h-9 px-4 py-2">
+                Apply
+              </button>
+            </div>
+          </div>
+          
+          <!-- Recommendation 2 -->
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+            <div class="p-6 pb-2">
+              <div class="flex justify-between items-start">
+                <div class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-amber-50 text-amber-700 border-amber-200">
+                  Rebalance
+                </div>
+                <i data-lucide="alert-triangle" class="h-4 w-4 text-amber-500"></i>
+              </div>
+              <h3 class="text-lg font-semibold mt-2">Technology Sector</h3>
+              <p class="text-sm text-muted-foreground">
+                Confidence: Medium • Impact: Medium
+              </p>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-sm text-muted-foreground">Current allocation (28%) exceeds target (20%). Consider reducing exposure to manage concentration risk</p>
+            </div>
+            <div class="flex items-center p-6 pt-0">
+              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 mr-2">
+                Details
+              </button>
+              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 text-white hover:bg-blue-700 h-9 px-4 py-2">
+                Apply
+              </button>
+            </div>
+          </div>
+          
+          <!-- Recommendation 3 -->
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+            <div class="p-6 pb-2">
+              <div class="flex justify-between items-start">
+                <div class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-blue-50 text-blue-700 border-blue-200">
+                  Hold
+                </div>
+                <i data-lucide="lightbulb" class="h-4 w-4 text-blue-500"></i>
+              </div>
+              <h3 class="text-lg font-semibold mt-2">Corporate Bonds</h3>
+              <p class="text-sm text-muted-foreground">
+                Confidence: High • Impact: Low
+              </p>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-sm text-muted-foreground">Current yield is competitive. No action needed at this time</p>
+            </div>
+            <div class="flex items-center p-6 pt-0">
+              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 mr-2">
+                Details
+              </button>
+              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 text-white hover:bg-blue-700 h-9 px-4 py-2">
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-6">
+          <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">Generate More Recommendations</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
+
+## 4. Stocks Page (stocks.html)
+
+```html
+&lt;!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stocks - Wealth Advisor AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <div class="flex min-h-screen flex-col">
+    &lt;!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div class="container flex h-14 items-center">
+        <div class="mr-4 hidden md:flex">
+          <a href="index.html" class="flex items-center space-x-2">
+            <span class="font-bold text-xl">
+              <span class="text-blue-600">Wealth</span>
+              <span>Advisor AI</span>
+            </span>
+          </a>
+        </div>
+        <div class="mr-4 flex md:hidden">
+          <a href="index.html" class="flex items-center space-x-2">
+            <span class="font-bold text-xl">
+              <span class="text-blue-600">W</span>
+              <span>A</span>
+            </span>
+          </a>
+        </div>
+        <nav class="mx-6 hidden md:flex items-center space-x-4 lg:space-x-6">
+          <a href="index.html" class="text-sm font-medium transition-colors hover:text-blue-600">Home</a>
+          <a href="dashboard.html" class="text-sm font-medium transition-colors hover:text-blue-600">Dashboard</a>
+          <a href="stocks.html" class="text-sm font-medium transition-colors hover:text-blue-600">Stocks</a>
+          <a href="help.html" class="text-sm font-medium transition-colors hover:text-blue-600">Help</a>
+          <a href="about.html" class="text-sm font-medium transition-colors hover:text-blue-600">About Us</a>
+        </nav>
+        <div class="flex flex-1 items-center justify-end space-x-2">
+          <nav class="flex items-center space-x-2">
+            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
+              <i data-lucide="bell" class="h-4 w-4"></i>
+              <span class="sr-only">Notifications</span>
+            </button>
+            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
+              <i data-lucide="settings" class="h-4 w-4"></i>
+              <span class="sr-only">Settings</span>
+            </button>
+            <div class="relative">
+              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 w-8 p-0 relative rounded-full">
+                <span class="relative flex h-8 w-8 shrink-0 overflow-hidden rounded-full">
+                  <img class="aspect-square h-full w-full" src="https://placehold.co/32x32" alt="User" />
+                  <span class="flex h-full w-full items-center justify-center rounded-full bg-gray-100">JD</span>
+                </span>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    &lt;!-- Main Content -->
+    <main class="flex-1 space-y-4 p-4 md:p-8 pt-6">
+      <div class="flex items-center justify-between">
+        <h2 class="text-3xl font-bold tracking-tight">Stock Explorer</h2>
+        <div class="flex items-center gap-2">
+          <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">
+            <i data-lucide="filter" class="h-4 w-4 mr-2"></i>
+            Filter
+          </button>
+          <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">
+            <i data-lucide="sliders-horizontal" class="h-4 w-4 mr-2"></i>
+            Customize
+          </button>
+        </div>
+      </div>
+
+      <div class="grid gap-4">
+        &lt;!-- Search Card -->
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+          <div class="p-6">
+            <div class="relative">
+              <i data-lucide="search" class="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground"></i>
+              <input placeholder="Search for stocks, ETFs, or indices..." class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 pl-8" />
+            </div>
+          </div>
+        </div>
+
+        &lt;!-- Featured Stocks Grid -->
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          &lt;!-- Stock Card 1 -->
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
+            <div class="p-4 pb-2">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-base font-semibold">AAPL</h3>
+                  <p class="text-sm text-muted-foreground">Apple Inc.</p>
+                </div>
+                <div class="text-sm font-medium text-green-500">
+                  +0.65%
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-0">
+              <div class="text-2xl font-bold">$191.24</div>
+              <div class="h-16 mt-2">
+                <svg viewBox="0 0 100 30" class="h-full w-full text-green-500">
+                  <path d="M0 25L5 20L10 22L15 16L20 18L25 14L30 15L35 10L40 12L45 8L50 9L55 5L60 7L65 3L70 6L75 2L80 4L85 1L90 3L95 0L100 2" fill="none" stroke="currentColor" stroke-width="2"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          &lt;!-- Stock Card 2 -->
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
+            <div class="p-4 pb-2">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-base font-semibold">MSFT</h3>
+                  <p class="text-sm text-muted-foreground">Microsoft Corp.</p>
+                </div>
+                <div class="text-sm font-medium text-green-500">
+                  +1.23%
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-0">
+              <div class="text-2xl font-bold">$403.78</div>
+              <div class="h-16 mt-2">
+                <svg viewBox="0 0 100 30" class="h-full w-full text-green-500">
+                  <path d="M0 25L5 20L10 22L15 16L20 18L25 14L30 15L35 10L40 12L45 8L50 9L55 5L60 7L65 3L70 6L75 2L80 4L85 1L90 3L95 0L100 2" fill="none" stroke="currentColor" stroke-width="2"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          &lt;!-- Stock Card 3 -->
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
+            <div class="p-4 pb-2">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-base font-semibold">GOOGL</h3>
+                  <p class="text-sm text-muted-foreground">Alphabet Inc.</p>
+                </div>
+                <div class="text-sm font-medium text-red-500">
+                  -0.42%
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-0">
+              <div class="text-2xl font-bold">$142.56</div>
+              <div class="h-16 mt-2">
+                <svg viewBox="0 0 100 30" class="h-full w-full text-red-500">
+                  <path d="M0 5L5 7L10 4L15 8L20 6L25 10L30 8L35 12L40 10L45 14L50 12L55 16L60 14L65 18L70 15L75 20L80 18L85 22L90 20L95 25L100 23" fill="none" stroke="currentColor" stroke-width="2"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          &lt;!-- Stock Card 4 -->
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
+            <div class="p-4 pb-2">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-base font-semibold">AMZN</h3>
+                  <p class="text-sm text-muted-foreground">Amazon.com Inc.</p>
+                </div>
+                <div class="text-sm font-medium text-green-500">
+                  +0.89%
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-0">
+              <div class="text-2xl font-bold">$178.12</div>
+              <div class="h-16 mt-2">
+                <svg viewBox="0 0 100 30" class="h-full w-full text-green-500">
+                  <path d="M0 25L5 20L10 22L15 16L20 18L25 14L30 15L35 10L40 12L45 8L50 9L55 5L60 7L65 3L70 6L75 2L80 4L85 1L90 3L95 0L100 2" fill="none" stroke="currentColor" stroke-width="2"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        &lt;!-- Stock Detail Card -->
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold leading-none tracking-tight">AAPL - Apple Inc.</h3>
+            <p class="text-sm text-muted-foreground">NASDAQ • Technology • Market Cap: $2.87T</p>
+          </div>
+          <div class="p-6 pt-0">
+            &lt;!-- Tabs -->
+            <div class="border-b">
+              <div class="flex h-10 items-center space-x-4">
+                <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm border-b-2 border-blue-600" data-state="active">Chart</button>
+                <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Analysis</button>
+                <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">News</button>
+                <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Recommendations</button>
+              </div>
+            </div>
+            
+            &lt;!-- Chart Tab Content -->
+            <div class="space-y-4 mt-4">
+              <div class="flex justify-between items-center">
+                <div>
+                  <div class="text-3xl font-bold">$191.24</div>
+                  <div class="text-sm text-green-500">+1.24 (0.65%)</div>
+                </div>
+                <div class="flex gap-2">
+                  <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">1D</button>
+                  <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">1W</button>
+                  <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">1M</button>
+                  <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">3M</button>
+                  <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">1Y</button>
+                  <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">5Y</button>
+                </div>
+              </div>
+              
+              &lt;!-- Stock Chart Placeholder -->
+              <div class="h-[300px] bg-muted rounded-md flex items-center justify-center">
+                <div class="text-center">
+                  <svg width="100%" height="100%" viewBox="0 0 300 200">
+                    &lt;!-- Grid lines -->
+                    <line x1="0" y1="0" x2="0" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                    <line x1="50" y1="0" x2="50" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                    <line x1="100" y1="0" x2="100" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                    <line x1="150" y1="0" x2="150" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                    <line x1="200" y1="0" x2="200" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                    <line x1="250" y1="0" x2="250" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                    <line x1="300" y1="0" x2="300" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                    
+                    <line x1="0" y1="0" x2="300" y2="0" stroke="#e5e7eb" stroke-width="1" />
+                    <line x1="0" y1="50" x2="300" y2="50" stroke="#e5e7eb" stroke-width="1" />
+                    <line x1="0" y1="100" x2="300" y2="100" stroke="#e5e7eb" stroke-width="1" />
+                    <line x1="0" y1="150" x2="300" y2="150" stroke="#e5e7eb" stroke-width="1" />
+                    <line x1="0" y1="200" x2="300" y2="200" stroke="#e5e7eb" stroke-width="1" />
+                    
+                    &lt;!-- Stock price line -->
+                    <path d="M0,150 L25,145 L50,140 L75,130 L100,135 L125,125 L150,120 L175,100 L200,110 L225,90 L250,85 L275,80 L300,75" fill="none" stroke="#3b82f6" stroke-width="2" />
+                  </svg>
+                </div>
+              </div>
+              
+              &lt;!-- Stock Info Cards -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+                  <div class="p-4">
+                    <div class="text-sm font-medium text-muted-foreground">Open</div>
+                    <div class="text-lg font-bold">$190.42</div>
+                  </div>
+                </div>
+                <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+                  <div class="p-4">
+                    <div class="text-sm font-medium text-muted-foreground">High</div>
+                    <div class="text-lg font-bold">$192.67</div>
+                  </div>
+                </div>
+                <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+                  <div class="p-4">
+                    <div class="text-sm font-medium text-muted-foreground">Low</div>
+                    <div class="text-lg font-bold">$189.23</div>
+                  </div>
+                </div>
+              </div>
+              
+              &lt;!-- Volume Chart -->
+              <div class="space-y-2">
+                <h3 class="text-lg font-medium">Volume</h3>
+                <div class="h-[100px] bg-muted rounded-md flex items-center justify-center">
+                  <div class="text-center">
+                    <svg width="100%" height="100%" viewBox="0 0 300 100">
+                      &lt;!-- Volume bars -->
+                      <rect x="0" y="60" width="20" height="40" fill="#6b7280" opacity="0.5" />
+                      <rect x="25" y="50" width="20" height="50" fill="#6b7280" opacity="0.5" />
+                      <rect x="50" y="70" width="20" height="30" fill="#6b7280" opacity="0.5" />
+                      <rect x="75" y="55" width="20" height="45" fill="#6b7280" opacity="0.5" />
+                      <rect x="100" y="40" width="20" height="60" fill="#6b7280" opacity="0.5" />
+                      <rect x="125" y="45" width="20" height="55" fill="#6b7280" opacity="0.5" />
+                      <rect x="150" y="65" width="20" height="35" fill="#6b7280" opacity="0.5" />
+                      <rect x="175" y="30" width="20" height="70" fill="#6b7280" opacity="0.5" />
+                      <rect x="200" y="35" width="20" height="65" fill="#6b7280" opacity="0.5" />
+                      <rect x="225" y="50" width="20" height="50" fill="#6b7280" opacity="0.5" />
+                      <rect x="250" y="40" width="20" height="60" fill="#6b7280" opacity="0.5" />
+                      <rect x="275" y="45" width="20" height="55" fill="#6b7280" opacity="0.5" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

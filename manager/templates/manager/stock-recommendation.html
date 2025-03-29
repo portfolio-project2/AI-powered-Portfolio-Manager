@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Recommendations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-6 bg-gray-100">
+    <div class="space-y-6">
+        <!-- AI Stock Analysis -->
+        <div class="rounded-lg border bg-white p-3 shadow-sm">
+            <div class="flex items-start gap-4">
+                <div class="rounded-full bg-blue-100 p-3">
+                    <svg class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-sm font-medium">AI Stock Analysis</p>
+                    <p class="text-sm text-gray-500">Based on financial metrics, market conditions, and technical analysis, our AI has generated the following recommendations for Apple Inc.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recommendations -->
+        <div class="grid gap-4 md:grid-cols-3">
+            <!-- Buy Recommendation -->
+            <div class="border rounded-lg bg-white p-4 shadow-sm">
+                <div class="flex justify-between items-start">
+                    <span class="bg-green-100 text-green-700 px-2 py-1 rounded">Buy</span>
+                    <span class="text-green-500">⬆️</span>
+                </div>
+                <h3 class="mt-2 text-lg font-bold">Target: $215</h3>
+                <p class="text-sm text-gray-500">Timeframe: 12 months • Confidence: High</p>
+                <p class="mt-2 text-sm text-gray-600">Strong services growth and potential new product categories (AR/VR) provide significant upside potential.</p>
+            </div>
+            
+            <!-- Hold Recommendation -->
+            <div class="border rounded-lg bg-white p-4 shadow-sm">
+                <div class="flex justify-between items-start">
+                    <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded">Hold</span>
+                    <span class="text-blue-500">💡</span>
+                </div>
+                <h3 class="mt-2 text-lg font-bold">Target: Current Position</h3>
+                <p class="text-sm text-gray-500">Timeframe: 3-6 months • Confidence: Medium</p>
+                <p class="mt-2 text-sm text-gray-600">Near-term market volatility may create better entry points, but long-term outlook remains positive.</p>
+            </div>
+            
+            <!-- Watch Recommendation -->
+            <div class="border rounded-lg bg-white p-4 shadow-sm">
+                <div class="flex justify-between items-start">
+                    <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded">Watch</span>
+                    <span class="text-yellow-500">⚠️</span>
+                </div>
+                <h3 class="mt-2 text-lg font-bold">Target: Support at $175</h3>
+                <p class="text-sm text-gray-500">Timeframe: 1-3 months • Confidence: Medium</p>
+                <p class="mt-2 text-sm text-gray-600">Technical indicators suggest potential consolidation before next leg up. Consider adding on pullbacks.</p>
+            </div>
+        </div>
+
+        <!-- Portfolio Impact Analysis -->
+        <div class="border rounded-lg bg-white p-4 shadow-sm">
+            <h3 class="text-lg font-bold">Portfolio Impact Analysis</h3>
+            <p class="text-sm text-gray-500">How Apple stock affects your overall portfolio</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                <div>
+                    <p class="text-sm text-gray-500">Current Allocation</p>
+                    <p class="text-lg font-bold">8.2% of Portfolio</p>
+                    <p class="text-xs text-yellow-500">Above target (5-7%)</p>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-500">Contribution to Returns</p>
+                    <p class="text-lg font-bold">+12.4% YTD</p>
+                    <p class="text-xs text-green-500">Outperforming portfolio average</p>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-500">Risk Impact</p>
+                    <p class="text-lg font-bold">Medium</p>
+                    <p class="text-xs">Beta: 1.28 vs Portfolio: 1.05</p>
+                </div>
+            </div>
+            
+            <div class="mt-4 p-3 bg-gray-100 rounded-md">
+                <p class="text-sm font-medium">AI Portfolio Recommendation:</p>
+                <p class="text-sm">Consider trimming position slightly to align with target allocation, but maintain core holding given strong fundamentals and growth prospects.</p>
+            </div>
+            
+            <button class="w-full mt-4 py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600">Generate Detailed Report</button>
+        </div>
+    </div>
+</body>
+</html>
