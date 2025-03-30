@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Overview</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-lg font-semibold mb-4">Portfolio Overview</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Pie Chart -->
+            <div class="flex flex-col items-center">
+                <canvas id="portfolioChart" class="h-64 w-64"></canvas>
+                <div class="flex flex-wrap justify-center mt-4 space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="h-3 w-3 bg-blue-500"></div>
+                        <span class="text-sm">Stocks (45%)</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="h-3 w-3 bg-green-500"></div>
+                        <span class="text-sm">Bonds (20%)</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="h-3 w-3 bg-yellow-500"></div>
+                        <span class="text-sm">Real Estate (15%)</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="h-3 w-3 bg-gray-500"></div>
+                        <span class="text-sm">Cash (10%)</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="h-3 w-3 bg-red-500"></div>
+                        <span class="text-sm">Commodities (5%)</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="h-3 w-3 bg-orange-500"></div>
+                        <span class="text-sm">Crypto (5%)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Details -->
+            <div class="space-y-4">
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-2">Portfolio Highlights</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex justify-between">
+                            <span class="text-gray-600">Diversification Score:</span>
+                            <span class="font-medium">8.2/10</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-600">Annual Return:</span>
+                            <span class="font-medium text-green-600">+12.4%</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-600">Volatility:</span>
+                            <span class="font-medium">Medium</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-600">ESG Score:</span>
+                            <span class="font-medium">7.5/10</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-2">AI Insights</h3>
+                    <p class="text-sm text-gray-600">
+                        Your portfolio is well-diversified but slightly overweight in technology stocks. Consider increasing bond allocation to reduce volatility in the current market conditions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Chart.js setup
+        const ctx = document.getElementById('portfolioChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["Stocks", "Bonds", "Real Estate", "Cash", "Commodities", "Crypto"],
+                datasets: [{
+                    data: [45, 20, 15, 10, 5, 5],
+                    backgroundColor: ["#3B82F6", "#10B981", "#FACC15", "#6B7280", "#EF4444", "#F97316"],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    datalabels: {
+                        color: '#fff',
+                        formatter: (value) => value + "%"
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

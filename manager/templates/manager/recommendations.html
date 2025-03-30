@@ -1,62 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Investment Recommendations - Wealth Advisor AI</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-</head>
+{% extends "base.html" %}
+{% block content %}
 <body>
-  <div class="flex min-h-screen flex-col">
-    <!-- Header -->
-    <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div class="container flex h-14 items-center">
-        <div class="mr-4 hidden md:flex">
-          <a href="index.html" class="flex items-center space-x-2">
-            <span class="font-bold text-xl">
-              <span class="text-blue-600">Wealth</span>
-              <span>Advisor AI</span>
-            </span>
-          </a>
-        </div>
-        <div class="mr-4 flex md:hidden">
-          <a href="index.html" class="flex items-center space-x-2">
-            <span class="font-bold text-xl">
-              <span class="text-blue-600">W</span>
-              <span>A</span>
-            </span>
-          </a>
-        </div>
-        <nav class="mx-6 hidden md:flex items-center space-x-4 lg:space-x-6">
-          <a href="index.html" class="text-sm font-medium transition-colors hover:text-blue-600">Home</a>
-          <a href="dashboard.html" class="text-sm font-medium transition-colors hover:text-blue-600">Dashboard</a>
-          <a href="stocks.html" class="text-sm font-medium transition-colors hover:text-blue-600">Stocks</a>
-          <a href="help.html" class="text-sm font-medium transition-colors hover:text-blue-600">Help</a>
-          <a href="about.html" class="text-sm font-medium transition-colors hover:text-blue-600">About Us</a>
-        </nav>
-        <div class="flex flex-1 items-center justify-end space-x-2">
-          <nav class="flex items-center space-x-2">
-            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
-              <i data-lucide="bell" class="h-4 w-4"></i>
-              <span class="sr-only">Notifications</span>
-            </button>
-            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
-              <i data-lucide="settings" class="h-4 w-4"></i>
-              <span class="sr-only">Settings</span>
-            </button>
-            <div class="relative">
-              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 w-8 p-0 relative rounded-full">
-                <span class="relative flex h-8 w-8 shrink-0 overflow-hidden rounded-full">
-                  <img class="aspect-square h-full w-full" src="https://placehold.co/32x32" alt="User" />
-                  <span class="flex h-full w-full items-center justify-center rounded-full bg-gray-100">JD</span>
-                </span>
-              </button>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
+  
+
     
     <!-- Main Content -->
     <main class="flex-1 space-y-4 p-4 md:p-8 pt-6">
@@ -171,77 +117,14 @@
         </div>
       </div>
     </main>
-  </div>
-  <script>
-    lucide.createIcons();
-  </script>
-</body>
-</html>
+  
+ 
 
-## 4. Stocks Page (stocks.html)
 
-```html
-&lt;!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stocks - Wealth Advisor AI</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-</head>
-<body>
-  <div class="flex min-h-screen flex-col">
-    &lt;!-- Header -->
-    <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div class="container flex h-14 items-center">
-        <div class="mr-4 hidden md:flex">
-          <a href="index.html" class="flex items-center space-x-2">
-            <span class="font-bold text-xl">
-              <span class="text-blue-600">Wealth</span>
-              <span>Advisor AI</span>
-            </span>
-          </a>
-        </div>
-        <div class="mr-4 flex md:hidden">
-          <a href="index.html" class="flex items-center space-x-2">
-            <span class="font-bold text-xl">
-              <span class="text-blue-600">W</span>
-              <span>A</span>
-            </span>
-          </a>
-        </div>
-        <nav class="mx-6 hidden md:flex items-center space-x-4 lg:space-x-6">
-          <a href="index.html" class="text-sm font-medium transition-colors hover:text-blue-600">Home</a>
-          <a href="dashboard.html" class="text-sm font-medium transition-colors hover:text-blue-600">Dashboard</a>
-          <a href="stocks.html" class="text-sm font-medium transition-colors hover:text-blue-600">Stocks</a>
-          <a href="help.html" class="text-sm font-medium transition-colors hover:text-blue-600">Help</a>
-          <a href="about.html" class="text-sm font-medium transition-colors hover:text-blue-600">About Us</a>
-        </nav>
-        <div class="flex flex-1 items-center justify-end space-x-2">
-          <nav class="flex items-center space-x-2">
-            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
-              <i data-lucide="bell" class="h-4 w-4"></i>
-              <span class="sr-only">Notifications</span>
-            </button>
-            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
-              <i data-lucide="settings" class="h-4 w-4"></i>
-              <span class="sr-only">Settings</span>
-            </button>
-            <div class="relative">
-              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 w-8 p-0 relative rounded-full">
-                <span class="relative flex h-8 w-8 shrink-0 overflow-hidden rounded-full">
-                  <img class="aspect-square h-full w-full" src="https://placehold.co/32x32" alt="User" />
-                  <span class="flex h-full w-full items-center justify-center rounded-full bg-gray-100">JD</span>
-                </span>
-              </button>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
+
+
     
-    &lt;!-- Main Content -->
+
     <main class="flex-1 space-y-4 p-4 md:p-8 pt-6">
       <div class="flex items-center justify-between">
         <h2 class="text-3xl font-bold tracking-tight">Stock Explorer</h2>
@@ -257,8 +140,7 @@
         </div>
       </div>
 
-      <div class="grid gap-4">
-        &lt;!-- Search Card -->
+    
         <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
           <div class="p-6">
             <div class="relative">
@@ -268,9 +150,9 @@
           </div>
         </div>
 
-        &lt;!-- Featured Stocks Grid -->
+    
         <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          &lt;!-- Stock Card 1 -->
+          
           <div class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
             <div class="p-4 pb-2">
               <div class="flex justify-between items-start">
@@ -293,7 +175,7 @@
             </div>
           </div>
           
-          &lt;!-- Stock Card 2 -->
+ 
           <div class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
             <div class="p-4 pb-2">
               <div class="flex justify-between items-start">
@@ -316,7 +198,7 @@
             </div>
           </div>
           
-          &lt;!-- Stock Card 3 -->
+       
           <div class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
             <div class="p-4 pb-2">
               <div class="flex justify-between items-start">
@@ -339,7 +221,7 @@
             </div>
           </div>
           
-          &lt;!-- Stock Card 4 -->
+          
           <div class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
             <div class="p-4 pb-2">
               <div class="flex justify-between items-start">
@@ -363,14 +245,13 @@
           </div>
         </div>
 
-        &lt;!-- Stock Detail Card -->
+       
         <div class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
           <div class="p-6">
             <h3 class="text-2xl font-semibold leading-none tracking-tight">AAPL - Apple Inc.</h3>
             <p class="text-sm text-muted-foreground">NASDAQ • Technology • Market Cap: $2.87T</p>
           </div>
-          <div class="p-6 pt-0">
-            &lt;!-- Tabs -->
+         
             <div class="border-b">
               <div class="flex h-10 items-center space-x-4">
                 <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm border-b-2 border-blue-600" data-state="active">Chart</button>
@@ -380,7 +261,7 @@
               </div>
             </div>
             
-            &lt;!-- Chart Tab Content -->
+            
             <div class="space-y-4 mt-4">
               <div class="flex justify-between items-center">
                 <div>
@@ -397,11 +278,11 @@
                 </div>
               </div>
               
-              &lt;!-- Stock Chart Placeholder -->
+             
               <div class="h-[300px] bg-muted rounded-md flex items-center justify-center">
                 <div class="text-center">
                   <svg width="100%" height="100%" viewBox="0 0 300 200">
-                    &lt;!-- Grid lines -->
+                    
                     <line x1="0" y1="0" x2="0" y2="200" stroke="#e5e7eb" stroke-width="1" />
                     <line x1="50" y1="0" x2="50" y2="200" stroke="#e5e7eb" stroke-width="1" />
                     <line x1="100" y1="0" x2="100" y2="200" stroke="#e5e7eb" stroke-width="1" />
@@ -416,13 +297,13 @@
                     <line x1="0" y1="150" x2="300" y2="150" stroke="#e5e7eb" stroke-width="1" />
                     <line x1="0" y1="200" x2="300" y2="200" stroke="#e5e7eb" stroke-width="1" />
                     
-                    &lt;!-- Stock price line -->
+                
                     <path d="M0,150 L25,145 L50,140 L75,130 L100,135 L125,125 L150,120 L175,100 L200,110 L225,90 L250,85 L275,80 L300,75" fill="none" stroke="#3b82f6" stroke-width="2" />
                   </svg>
                 </div>
               </div>
               
-              &lt;!-- Stock Info Cards -->
+            
               <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
                   <div class="p-4">
@@ -444,13 +325,13 @@
                 </div>
               </div>
               
-              &lt;!-- Volume Chart -->
+          
               <div class="space-y-2">
                 <h3 class="text-lg font-medium">Volume</h3>
                 <div class="h-[100px] bg-muted rounded-md flex items-center justify-center">
                   <div class="text-center">
                     <svg width="100%" height="100%" viewBox="0 0 300 100">
-                      &lt;!-- Volume bars -->
+                      
                       <rect x="0" y="60" width="20" height="40" fill="#6b7280" opacity="0.5" />
                       <rect x="25" y="50" width="20" height="50" fill="#6b7280" opacity="0.5" />
                       <rect x="50" y="70" width="20" height="30" fill="#6b7280" opacity="0.5" />
@@ -472,9 +353,7 @@
         </div>
       </div>
     </main>
-  </div>
-  <script>
-    lucide.createIcons();
-  </script>
-</body>
-</html>
+</div>
+
+{% endblock %}
+

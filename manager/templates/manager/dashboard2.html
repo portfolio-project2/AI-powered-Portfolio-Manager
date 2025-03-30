@@ -1,65 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - Wealth Advisor AI</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-</head>
-<body>
-  <div class="flex min-h-screen flex-col">
-    <!-- Header -->
-    <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div class="container flex h-14 items-center">
-        <div class="mr-4 hidden md:flex">
-          <a href="index.html" class="flex items-center space-x-2">
-            <span class="font-bold text-xl">
-              <span class="text-blue-600">Wealth</span>
-              <span>Advisor AI</span>
-            </span>
-          </a>
-        </div>
-        <div class="mr-4 flex md:hidden">
-          <a href="index.html" class="flex items-center space-x-2">
-            <span class="font-bold text-xl">
-              <span class="text-blue-600">W</span>
-              <span>A</span>
-            </span>
-          </a>
-        </div>
-        <nav class="mx-6 hidden md:flex items-center space-x-4 lg:space-x-6">
-          <a href="index.html" class="text-sm font-medium transition-colors hover:text-blue-600">Home</a>
-          <a href="dashboard.html" class="text-sm font-medium transition-colors hover:text-blue-600">Dashboard</a>
-          <a href="stocks.html" class="text-sm font-medium transition-colors hover:text-blue-600">Stocks</a>
-          <a href="help.html" class="text-sm font-medium transition-colors hover:text-blue-600">Help</a>
-          <a href="about.html" class="text-sm font-medium transition-colors hover:text-blue-600">About Us</a>
-        </nav>
-        <div class="flex flex-1 items-center justify-end space-x-2">
-          <nav class="flex items-center space-x-2">
-            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
-              <i data-lucide="bell" class="h-4 w-4"></i>
-              <span class="sr-only">Notifications</span>
-            </button>
-            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 p-0">
-              <i data-lucide="settings" class="h-4 w-4"></i>
-              <span class="sr-only">Settings</span>
-            </button>
-            <div class="relative">
-              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 w-8 p-0 relative rounded-full">
-                <span class="relative flex h-8 w-8 shrink-0 overflow-hidden rounded-full">
-                  <img class="aspect-square h-full w-full" src="https://placehold.co/32x32" alt="User" />
-                  <span class="flex h-full w-full items-center justify-center rounded-full bg-gray-100">JD</span>
-                </span>
-              </button>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
-    
-    <!-- Main Content -->
-    <main class="flex-1 space-y-4 p-4 md:p-8 pt-6">
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="flex-1 space-y-4 p-4 md:p-8 pt-6">
       <div class="flex items-center justify-between">
         <h2 class="text-3xl font-bold tracking-tight">Dashboard</h2>
         <div class="flex items-center gap-2">
@@ -71,10 +16,15 @@
       <div class="space-y-4">
         <div class="border-b">
           <div class="flex h-10 items-center space-x-4">
+            
             <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm border-b-2 border-blue-600" data-state="active">Overview</button>
+            <a href="{% url 'recommendations' %}">
             <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Recommendations</button>
+            </a>
             <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Market News</button>
+            <a href="{% url 'financial_goals' %}">
             <button class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Financial Goals</button>
+            </a>  
           </div>
         </div>
         
@@ -282,10 +232,6 @@
           </div>
         </div>
       </div>
-    </main>
-  </div>
-  <script>
-    lucide.createIcons();
-  </script>
-</body>
-</html>
+</main>
+
+{% endblock %}

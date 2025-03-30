@@ -1,0 +1,27 @@
+<header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
+    <div class="container mx-auto flex h-16 items-center justify-between px-4">
+      <div class="flex items-center gap-2 font-bold text-xl">
+        <i data-lucide="trending-up" class="h-5 w-5 text-primary"></i>
+        <a href="{% url 'home' %}">
+        <span>FinSense</span>
+        </a>
+      </div>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#features" class="text-sm font-medium hover:text-primary">Features</a>
+        <a href="#how-it-works" class="text-sm font-medium hover:text-primary">How It Works</a>
+        <a href="#testimonials" class="text-sm font-medium hover:text-primary">Testimonials</a>
+        <a href="#pricing" class="text-sm font-medium hover:text-primary">Pricing</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        {% if user.is_authenticated %}
+          <a href="{% url 'account_logout' %}" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">Log out</a>
+        {% else %}
+          <a href="{% url 'account_login' %}" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">Log in</a>
+        {% endif %}
+
+        <a href="{% url 'dashboard' %}"> 
+        <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2">Get Started</button>
+        </a>
+      </div>
+    </div>
+  </header>

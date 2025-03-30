@@ -6,13 +6,18 @@ def home(request):
     return render(request, 'manager/home.html')
 
 
-def help_center(request):
-    return render(request, 'manager/help_center.html')
-
-
 def dashboard(request):
-    return render(request, 'manager/dashboard.html')
+    return render(request, 'manager/dashboard2.html')
 
-def news_data(request):
-    
-    return render(request, 'manager/news_data.html')
+def market_news(request):
+    return render(request, 'manager/market_news.html')
+
+def financial_goals(request):
+    return render(request, 'manager/financial-goals.html')
+
+
+def recommendations(request):
+    return render(request, 'manager/recommendations.html')
+
+def help_center(request):
+    return render(request, 'manager/help.html')

@@ -7,11 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Portfolio Manager</title>
     <!-- tailwind -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  DEFAULT: '#3b82f6',
+                  foreground: '#ffffff',
+                },
+                muted: {
+                  DEFAULT: '#f3f4f6',
+                  foreground: '#6b7280',
+                },
+                background: '#ffffff',
+                foreground: '#171717',
+              }
+            }
+          }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/lucide-icons@latest/dist/umd/lucide.min.js" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lucide-icons@latest/dist/umd/lucide.min.js"></script>
 </head>
-<body>
+
+<body class="flex min-h-screen flex-col">
+    {% include "includes/header.html" %}
+    
     {% block content %}
 
     {% endblock %}
+
+    {% include "includes/footer.html" %}
+    <script>
+        lucide.createIcons()
+    </script>
 </body>
 </html>

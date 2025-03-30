@@ -1,74 +1,368 @@
 {% extends "base.html" %}
 
 {% block content %}
+<main class="flex-1">
+    <!-- Hero Section -->
+    <section class="relative">
+      <div class="container mx-auto flex flex-col items-center justify-center space-y-8 py-24 text-center md:py-32 px-4">
+        <div class="space-y-4 max-w-3xl">
+          <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+            AI-Powered Portfolio Management for
+            <span class="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+              Smarter Investing
+            </span>
+          </h1>
+          <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+            Leverage the power of artificial intelligence to optimize your investments, reduce risk, and maximize
+            returns with our cutting-edge portfolio management platform.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8">
+            Start Free Trial <i data-lucide="arrow-right" class="h-4 w-4 ml-1"></i>
+          </button>
+          <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8">
+            Watch Demo
+          </button>
+        </div>
+        <div class="relative w-full max-w-5xl rounded-lg border bg-background p-2 shadow-xl">
+          <img src="/placeholder.svg?height=600&width=1200" alt="Dashboard preview" class="rounded-md" width="1200" height="600">
+        </div>
+      </div>
+    </section>
 
-<body class="flex flex-col min-h-screen bg-gray-100">
-    <header class="bg-white p-4 shadow-md">
-        <h1 class="text-3xl font-bold text-center">Stock Explorer</h1>
-    </header>
-    <main class="flex-1 space-y-4 p-6">
-        <div class="flex justify-between items-center">
-            <h2 class="text-2xl font-bold">Stock Explorer</h2>
-            <div class="flex gap-2">
-                <button class="border px-4 py-2 rounded flex items-center">
-                    <span class="mr-2">&#x1F50D;</span> Filter
-                </button>
-                <button class="border px-4 py-2 rounded flex items-center">
-                    <span class="mr-2">&#9881;</span> Customize
-                </button>
-            </div>
+    <!-- Stats Section -->
+    <section class="bg-muted py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div class="flex flex-col items-center justify-center text-center">
+            <h3 class="text-4xl font-bold">$2.5B+</h3>
+            <p class="text-muted-foreground">Assets Under Management</p>
+          </div>
+          <div class="flex flex-col items-center justify-center text-center">
+            <h3 class="text-4xl font-bold">18.7%</h3>
+            <p class="text-muted-foreground">Average Annual Return</p>
+          </div>
+          <div class="flex flex-col items-center justify-center text-center">
+            <h3 class="text-4xl font-bold">50,000+</h3>
+            <p class="text-muted-foreground">Active Users</p>
+          </div>
         </div>
-        
-        <div class="bg-white p-4 rounded shadow">
-            <div class="relative">
-                <input type="text" placeholder="Search for stocks, ETFs, or indices..." class="w-full p-2 border rounded pl-8">
-                <span class="absolute left-2 top-2.5">🔍</span>
-            </div>
-        </div>
+      </div>
+    </section>
 
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <div class="bg-white p-4 rounded shadow">
-                <div class="flex justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold">AAPL</h3>
-                        <p class="text-gray-500">Apple Inc.</p>
-                    </div>
-                    <span class="text-green-500">+0.65%</span>
-                </div>
-                <p class="text-2xl font-bold mt-2">$191.24</p>
-            </div>
-            <div class="bg-white p-4 rounded shadow">
-                <div class="flex justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold">MSFT</h3>
-                        <p class="text-gray-500">Microsoft Corp.</p>
-                    </div>
-                    <span class="text-green-500">+1.23%</span>
-                </div>
-                <p class="text-2xl font-bold mt-2">$403.78</p>
-            </div>
-            <div class="bg-white p-4 rounded shadow">
-                <div class="flex justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold">GOOGL</h3>
-                        <p class="text-gray-500">Alphabet Inc.</p>
-                    </div>
-                    <span class="text-red-500">-0.42%</span>
-                </div>
-                <p class="text-2xl font-bold mt-2">$142.56</p>
-            </div>
-            <div class="bg-white p-4 rounded shadow">
-                <div class="flex justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold">AMZN</h3>
-                        <p class="text-gray-500">Amazon.com Inc.</p>
-                    </div>
-                    <span class="text-green-500">+0.89%</span>
-                </div>
-                <p class="text-2xl font-bold mt-2">$178.12</p>
-            </div>
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Intelligent Features</h2>
+          <p class="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
+            Our AI-powered platform offers sophisticated tools to help you make better investment decisions.
+          </p>
         </div>
-    </main>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <i data-lucide="brain" class="h-10 w-10 text-primary mb-2"></i>
+              <h3 class="text-2xl font-semibold leading-none tracking-tight">AI Risk Analysis</h3>
+              <p class="text-sm text-muted-foreground">
+                Advanced algorithms analyze market trends and predict potential risks to your portfolio.
+              </p>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-sm text-muted-foreground">
+                Our AI continuously monitors market conditions and provides real-time risk assessments to help you
+                make informed decisions.
+              </p>
+            </div>
+          </div>
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <i data-lucide="line-chart" class="h-10 w-10 text-primary mb-2"></i>
+              <h3 class="text-2xl font-semibold leading-none tracking-tight">Smart Diversification</h3>
+              <p class="text-sm text-muted-foreground">
+                Optimize your portfolio allocation based on your risk tolerance and financial goals.
+              </p>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-sm text-muted-foreground">
+                Our platform recommends the ideal asset allocation to maximize returns while minimizing risk through
+                intelligent diversification.
+              </p>
+            </div>
+          </div>
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <i data-lucide="bar-chart-3" class="h-10 w-10 text-primary mb-2"></i>
+              <h3 class="text-2xl font-semibold leading-none tracking-tight">Predictive Analytics</h3>
+              <p class="text-sm text-muted-foreground">
+                Leverage machine learning to forecast market trends and identify investment opportunities.
+              </p>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-sm text-muted-foreground">
+                Our predictive models analyze vast amounts of market data to identify patterns and potential
+                investment opportunities before they become obvious.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-muted">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">How It Works</h2>
+          <p class="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
+            Getting started with IntelliPort is simple and straightforward.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+          <div class="flex flex-col items-center text-center">
+            <div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground text-2xl font-bold mb-4">
+              1
+            </div>
+            <h3 class="text-xl font-bold mb-2">Connect Your Accounts</h3>
+            <p class="text-muted-foreground">
+              Securely link your investment accounts to our platform with bank-level encryption.
+            </p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground text-2xl font-bold mb-4">
+              2
+            </div>
+            <h3 class="text-xl font-bold mb-2">Set Your Goals</h3>
+            <p class="text-muted-foreground">
+              Define your financial objectives and risk tolerance to create a personalized investment strategy.
+            </p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground text-2xl font-bold mb-4">
+              3
+            </div>
+            <h3 class="text-xl font-bold mb-2">Let AI Optimize</h3>
+            <p class="text-muted-foreground">
+              Our AI analyzes your portfolio and provides recommendations to optimize performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">What Our Clients Say</h2>
+          <p class="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
+            Hear from investors who have transformed their portfolios with IntelliPort.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-lg border bg-background/50 text-card-foreground shadow-sm">
+            <div class="p-6">
+              <div class="flex items-start gap-4">
+                <div class="rounded-full bg-muted h-10 w-10"></div>
+                <div>
+                  <p class="text-sm leading-7">
+                    "IntelliPort's AI recommendations have increased my portfolio's performance by 22% in just six
+                    months. The risk analysis tools are particularly impressive."
+                  </p>
+                  <p class="mt-2 text-sm font-medium">Sarah J.</p>
+                  <p class="text-xs text-muted-foreground">Investment Analyst</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-lg border bg-background/50 text-card-foreground shadow-sm">
+            <div class="p-6">
+              <div class="flex items-start gap-4">
+                <div class="rounded-full bg-muted h-10 w-10"></div>
+                <div>
+                  <p class="text-sm leading-7">
+                    "As someone new to investing, IntelliPort made the process simple and less intimidating. The AI
+                    guidance feels like having a personal financial advisor."
+                  </p>
+                  <p class="mt-2 text-sm font-medium">Michael T.</p>
+                  <p class="text-xs text-muted-foreground">Software Engineer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-lg border bg-background/50 text-card-foreground shadow-sm">
+            <div class="p-6">
+              <div class="flex items-start gap-4">
+                <div class="rounded-full bg-muted h-10 w-10"></div>
+                <div>
+                  <p class="text-sm leading-7">
+                    "The predictive analytics have helped me identify several opportunities I would have otherwise
+                    missed. This platform is worth every penny."
+                  </p>
+                  <p class="mt-2 text-sm font-medium">Lisa R.</p>
+                  <p class="text-xs text-muted-foreground">Retirement Planner</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-muted">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Simple, Transparent Pricing</h2>
+          <p class="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
+            Choose the plan that fits your investment needs.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h3 class="text-2xl font-semibold leading-none tracking-tight">Starter</h3>
+              <div class="mt-4 flex items-baseline text-5xl font-bold">
+                $19<span class="ml-1 text-xl font-normal text-muted-foreground">/month</span>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <ul class="space-y-3">
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-2 h-5 w-5 text-primary">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  Basic AI portfolio analysis
+                </li>
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-2 h-5 w-5 text-primary">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  Up to 3 connected accounts
+                </li>
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-2 h-5 w-5 text-primary">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  Weekly portfolio updates
+                </li>
+              </ul>
+              <button class="mt-8 w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">Get Started</button>
+            </div>
+          </div>
+          <div class="rounded-lg border-2 border-primary bg-card text-card-foreground shadow-sm">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <div class="flex justify-between items-center">
+                <h3 class="text-2xl font-semibold leading-none tracking-tight">Professional</h3>
+                <span class="px-2.5 py-0.5 text-xs font-semibold bg-primary text-primary-foreground rounded-full">
+                  Popular
+                </span>
+              </div>
+              <div class="mt-4 flex items-baseline text-5xl font-bold">
+                $49<span class="ml-1 text-xl font-normal text-muted-foreground">/month</span>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <ul class="space-y-3">
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-2 h-5 w-5 text-primary">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  Advanced AI risk analysis
+                </li>
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-2 h-5 w-5 text-primary">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  Up to 10 connected accounts
+                </li>
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-2 h-5 w-5 text-primary">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  Daily portfolio updates
+                </li>
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-2 h-5 w-5 text-primary">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  Predictive market analytics
+                </li>
+              </ul>
+              <button class="mt-8 w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">Get Started</button>
+            </div>
+          </div>
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h3 class="text-2xl font-semibold leading-none tracking-tight">Enterprise</h3>
+              <div class="mt-4 flex items-baseline text-5xl font-bold">
+                $199<span class="ml-1 text-xl font-normal text-muted-foreground">/month</span>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <ul class="space-y-3">
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-2 h-5 w-5 text-primary">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  Full AI suite with custom models
+                </li>
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-2 h-5 w-5 text-primary">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  Unlimited connected accounts
+                </li>
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-2 h-5 w-5 text-primary">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  Real-time portfolio updates
+                </li>
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-2 h-5 w-5 text-primary">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  Dedicated account manager
+                </li>
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-2 h-5 w-5 text-primary">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                  </svg>
+                  Custom API integrations
+                </li>
+              </ul>
+              <button class="mt-8 w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">Contact Sales</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="rounded-lg bg-primary p-8 md:p-16 text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
+            Ready to Transform Your Investment Strategy?
+          </h2>
+          <p class="mt-4 text-lg text-primary-foreground/90 max-w-2xl mx-auto">
+            Join thousands of investors who are already leveraging AI to optimize their portfolios and achieve their
+            financial goals.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white text-primary h-11 px-8 gap-1">
+              Start Free Trial <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+            <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-transparent text-primary-foreground border border-primary-foreground/20 hover:bg-primary-foreground/10 h-11 px-8">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
 {% endblock %}
 
